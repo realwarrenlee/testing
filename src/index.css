@@ -36,52 +36,29 @@
   body {
     @apply bg-background text-foreground;
     font-feature-settings: "ss01" 1, "ss02" 1, "cv01" 1, "cv02" 1, "cv03" 1, "cv04" 1;
-    font-family: "Helvetica Neue", sans-serif;
   }
 }
 
 .gradient-text-cool {
-  background: linear-gradient(135deg, #0EA5E9 0%, #9b87f5 100%);
+  background: linear-gradient(135deg, #0EA5E9 0%, #9b87f5 100%, #D946EF 100%);
   -webkit-background-clip: text;
   color: transparent;
   background-clip: text;
-  background-size: 200% 200%;
-  animation: gradient-shift 3s linear infinite;
+  background-size: 200% 100%;
+  animation: gradient 8s linear infinite;
 }
 
 .gradient-text-warm {
-  background: linear-gradient(135deg, #D946EF 0%, #F97316 100%);
+  background: linear-gradient(135deg, #D946EF, #F97316);
   -webkit-background-clip: text;
   color: transparent;
   background-clip: text;
-  background-size: 200% 200%;
-  animation: gradient-shift 3s linear infinite;
 }
 
-@keyframes gradient-shift {
+@keyframes gradient {
   0% { background-position: 0% 50%; }
   50% { background-position: 100% 50%; }
   100% { background-position: 0% 50%; }
-}
-
-@keyframes rainbow-rotate {
-  0% { --rotation: 0deg; }
-  100% { --rotation: 360deg; }
-}
-
-@keyframes backgroundShift {
-  0%, 100% {
-    background-color: #D3E4FD;
-    background-image: linear-gradient(to br, #D3E4FD, #FFDEE2);
-  }
-  33% {
-    background-color: #0EA5E9;
-    background-image: linear-gradient(to br, #0EA5E9, #D3E4FD);
-  }
-  66% {
-    background-color: #E5DEFF;
-    background-image: linear-gradient(to br, #FDE1D3, #E5DEFF);
-  }
 }
 
 .radiant-glow {
