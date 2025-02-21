@@ -1,10 +1,19 @@
 
 import { motion } from "framer-motion";
+import { Link } from "react-router-dom";
 
 const Index = () => {
+  const text = "Welcome to my world";
+  
   return (
-    <div className="relative min-h-screen w-full overflow-hidden flex items-center justify-center bg-white">
+    <div className="relative min-h-screen w-full overflow-hidden flex items-center justify-center bg-white font-['Helvetica Neue']">
       <div className="radiant-glow animate-glow-pulse" />
+      
+      <div className="absolute top-4 right-4">
+        <Link to="/about" className="px-4 py-2 rounded-full bg-gray-50 border border-gray-100 text-gray-600 hover:bg-gray-100 transition-colors">
+          About Me
+        </Link>
+      </div>
       
       <motion.div
         initial={{ opacity: 0, y: 20 }}
@@ -19,12 +28,25 @@ const Index = () => {
           className="mb-6 text-lg text-gray-600"
         >
           <span className="px-4 py-2 rounded-full bg-gray-50 backdrop-blur-sm border border-gray-100">
-            Welcome to my world
+            {text.split("").map((char, index) => (
+              <motion.span
+                key={index}
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                transition={{
+                  duration: 0.3,
+                  delay: index * 0.05,
+                }}
+              >
+                {char}
+              </motion.span>
+            ))}
           </span>
         </motion.div>
 
         <h1 className="text-6xl sm:text-8xl font-bold tracking-tight">
-          <span className="gradient-text-cool">Warren </span>
+          <span className="gradient-text-cool">Warren</span>
+          {" "}
           <span className="gradient-text-warm">Lee</span>
         </h1>
         

@@ -40,7 +40,7 @@
 }
 
 .gradient-text-cool {
-  background: linear-gradient(135deg, #0EA5E9, #9b87f5);
+  background: linear-gradient(135deg, #0EA5E9, #9b87f5 70%);
   -webkit-background-clip: text;
   color: transparent;
   background-clip: text;
