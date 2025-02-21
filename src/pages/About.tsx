@@ -9,7 +9,7 @@ const About = () => {
       
       <div className="absolute top-4 right-4">
         <Link to="/" className="px-4 py-2 rounded-full bg-gray-50 border border-gray-100 text-gray-600 hover:bg-gray-100 transition-colors">
-          Back Home
+          Home
         </Link>
       </div>
 

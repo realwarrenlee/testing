@@ -40,10 +40,12 @@
 }
 
 .gradient-text-cool {
-  background: linear-gradient(135deg, #0EA5E9, #9b87f5 70%);
+  background: linear-gradient(135deg, #0EA5E9 0%, #9b87f5 100%, #D946EF 100%);
   -webkit-background-clip: text;
   color: transparent;
   background-clip: text;
+  background-size: 200% 100%;
+  animation: gradient 8s linear infinite;
 }
 
 .gradient-text-warm {
@@ -51,6 +53,12 @@
   -webkit-background-clip: text;
   color: transparent;
   background-clip: text;
+}
+
+@keyframes gradient {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
 }
 
 .radiant-glow {
