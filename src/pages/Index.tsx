@@ -10,7 +10,7 @@ const Index = () => {
       <div className="radiant-glow animate-glow-pulse" />
       
       <div className="absolute top-4 right-4">
-        <Link to="/about" className="group px-4 py-2 rounded-full bg-gray-50 border border-gray-100 text-gray-600 hover:bg-gray-100 transition-colors relative rainbow-border">
+        <Link to="/about" className="group px-4 py-2 rounded-full bg-gray-50 text-gray-600 hover:bg-gray-100 transition-colors relative rainbow-border">
           <span className="relative z-10 group-hover:bg-gradient-to-r from-[#ff0080] via-[#7928ca] to-[#ff0080] group-hover:text-transparent group-hover:bg-clip-text transition-all duration-300">
             About Me
           </span>
@@ -23,57 +23,55 @@ const Index = () => {
         transition={{ duration: 1, ease: "easeOut" }}
         className="relative z-10 text-center space-y-12"
       >
-        <div>
-          <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ delay: 1.5, duration: 1 }}
-            className="mb-6 text-lg text-gray-600"
-          >
-            <span className="px-4 py-2 rounded-full bg-gray-50 backdrop-blur-sm border border-gray-100">
-              {text.split("").map((char, index) => (
-                <motion.span
-                  key={index}
-                  initial={{ opacity: 0 }}
-                  animate={{ opacity: 1 }}
-                  transition={{
-                    duration: 0.3,
-                    delay: 2 + (index * 0.05),
-                  }}
-                >
-                  {char}
-                </motion.span>
-              ))}
-            </span>
-          </motion.div>
+        <motion.div
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ delay: 1.5, duration: 1 }}
+          className="mb-6 text-lg text-gray-600"
+        >
+          <span className="px-4 py-2 rounded-full bg-gray-50 backdrop-blur-sm border border-gray-100">
+            {text.split("").map((char, index) => (
+              <motion.span
+                key={index}
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                transition={{
+                  duration: 0.3,
+                  delay: 2 + (index * 0.05),
+                }}
+              >
+                {char}
+              </motion.span>
+            ))}
+          </span>
+        </motion.div>
 
-          <h1 className="text-6xl sm:text-8xl font-bold tracking-tight relative">
-            <motion.span 
-              className="gradient-text-cool"
-              animate={{ x: [0, 2, 0] }}
-              transition={{
-                repeat: Infinity,
-                duration: 2,
-                ease: "easeInOut"
-              }}
-            >
-              Warren
-            </motion.span>
-            {" "}
-            <motion.span 
-              className="gradient-text-warm"
-              animate={{ x: [0, 2, 0] }}
-              transition={{
-                repeat: Infinity,
-                duration: 2,
-                ease: "easeInOut",
-                delay: 0.5
-              }}
-            >
-              Lee
-            </motion.span>
-          </h1>
-        </div>
+        <h1 className="text-6xl sm:text-8xl font-bold tracking-tight relative">
+          <motion.span 
+            className="gradient-text-cool"
+            animate={{ x: [0, 2, 0] }}
+            transition={{
+              repeat: Infinity,
+              duration: 2,
+              ease: "easeInOut"
+            }}
+          >
+            Warren
+          </motion.span>
+          {" "}
+          <motion.span 
+            className="gradient-text-warm"
+            animate={{ x: [0, 2, 0] }}
+            transition={{
+              repeat: Infinity,
+              duration: 2,
+              ease: "easeInOut",
+              delay: 0.5
+            }}
+          >
+            Lee
+          </motion.span>
+        </h1>
 
         <motion.div
           initial={{ opacity: 0 }}

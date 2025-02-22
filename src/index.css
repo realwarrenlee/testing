@@ -83,22 +83,6 @@
   }
 }
 
-.rainbow-border-gradient {
-  --gradient-angle: 0deg;
-  background: 
-    linear-gradient(
-      var(--gradient-angle),
-      #ff0000,
-      #ff8000,
-      #ffff00,
-      #00ff00,
-      #0000ff,
-      #4b0082,
-      #8f00ff
-    );
-  animation: rotate 3s linear infinite;
-}
-
 .rainbow-border {
   position: relative;
   background-clip: padding-box;
